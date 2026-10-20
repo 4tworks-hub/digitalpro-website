@@ -1,0 +1,250 @@
+
+/* Basic setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1020;
+    color: #f5f7ff;
+    line-height: 1.7;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #10182b;
+    border-bottom: 1px solid #263653;
+}
+
+header h2 {
+    color: #65e0c1;
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #e1e8f5;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #65e0c1;
+}
+
+/* Hero section */
+#home {
+    text-align: center;
+    padding: 110px 20px;
+    background: radial-gradient(
+        circle at top,
+        #203858,
+        #0b1020 65%
+    );
+}
+
+#home > p:first-child {
+    color: #65e0c1;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+#home h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    max-width: 850px;
+    margin: 22px auto;
+}
+
+#home p {
+    color: #bdc8dc;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+/* Buttons */
+#home a,
+#contact a {
+    display: inline-block;
+    background: #65e0c1;
+    color: #0b1020;
+    padding: 12px 22px;
+    margin: 8px 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home a:hover,
+#contact a:hover {
+    background: #ffffff;
+}
+
+/* General sections */
+section:not(#home) {
+    padding: 75px 8%;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#services {
+    text-align: center;
+}
+
+#services article {
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    min-width: 210px;
+    min-height: 190px;
+    text-align: left;
+    background: #141e33;
+    border: 1px solid #2b3b58;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 8px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+#services article:hover {
+    transform: translateY(-5px);
+    border-color: #65e0c1;
+}
+
+#services article h3 {
+    color: #65e0c1;
+    margin-bottom: 12px;
+}
+
+#services article p {
+    color: #c0cade;
+    font-size: 15px;
+}
+
+/* About and process */
+#about,
+#process {
+    background: #10182b;
+}
+
+#about p {
+    max-width: 760px;
+    margin: 12px auto;
+    text-align: center;
+    color: #c0cade;
+}
+
+#process ol {
+    max-width: 650px;
+    margin: auto;
+    padding-left: 25px;
+    color: #dce4f4;
+}
+
+#process li {
+    padding: 8px 0;
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color: #c0cade;
+    margin: 12px 0;
+}
+
+#contact a[href^="mailto"] {
+    background: transparent;
+    color: #65e0c1;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #070b15;
+    border-top: 1px solid #263653;
+    padding: 25px;
+    text-align: center;
+    color: #9eabc3;
+}
+
+/* Mobile design */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    #home {
+        padding: 75px 18px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    section:not(#home) {
+        padding: 55px 15px;
+    }
+
+    #services article {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        margin: 15px 0;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+}
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: #25D366;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+}
